@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/main.css">
-  <title>E-commerce product page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="css/main.css">
+    <title>E-commerce product page</title>
 </head>
 <body>
     <header class="header">
@@ -21,8 +20,40 @@
             </ul>
         </nav>
         <div class="header-icon">
-            <img src="" alt="" class="cart-icon">
+            <img src="images/icon-cart.svg" class="cart-icon">
+            <img src="images/image-avatar.png" class="avatar">
         </div>
     </header>
+    <div class="product-container">
+        <div class="product-gallery">
+            <figure class="main-image">
+                <img src="images/image-product-1.jpg" alt="" class="cover-image">
+            </figure>
+            <div class="thumbnail-row">
+                <img src="images/image-product-1-thumbnail.jpg" alt="" class="product-thumbnail">
+                <img src="images/image-product-2-thumbnail.jpg" alt="" class="product-thumbnail">
+                <img src="images/image-product-3-thumbnail.jpg" alt="" class="product-thumbnail">
+                <img src="images/image-product-4-thumbnail.jpg" alt="" class="product-thumbnail">
+            </div>
+        </div>
+        <div class="product-details">
+            <p class="company-name">SNEAKER COMPANY</p>
+            <h1 class="product-title">Fall Limited Edition Sneakers </h1>
+            <p class="product-desc">Those low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber</p>
+            <h1 class="product-price">250$</h1>
+            <div class="add-cart-row">
+                <div class="items-count"> 
+                    <img src="images/icon-plus.svg" class="increment-icon">
+                    <h1> 0 </h1>
+                    <img src="images/icon-minus.svg" class="decrement-icon">
+                </div>
+                <button class="add-cart-btn">
+                    <img src="images/icon-cart.svg" class="add-cart-icon">
+                    <p class="add-cart-txt">Add to cart</p>
+                </button>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
