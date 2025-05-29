@@ -19,6 +19,7 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        <!-- TODO: Adding cart html -->
         <div class="header-icon">
             <img src="images/icon-cart.svg" class="cart-icon">
             <img src="images/image-avatar.png" class="avatar">
@@ -27,13 +28,23 @@
     <div class="product-container">
         <div class="product-gallery">
             <figure class="main-image">
-                <img src="images/image-product-1.jpg" alt="" class="cover-image">
+                <img src="images/image-product-1.jpg" alt="" id="mainProductImg" class="cover-image">
             </figure>
             <div class="thumbnail-row">
-                <img src="images/image-product-1-thumbnail.jpg" alt="" class="product-thumbnail">
-                <img src="images/image-product-2-thumbnail.jpg" alt="" class="product-thumbnail">
-                <img src="images/image-product-3-thumbnail.jpg" alt="" class="product-thumbnail">
-                <img src="images/image-product-4-thumbnail.jpg" alt="" class="product-thumbnail">
+                <img src="images/image-product-1-thumbnail.jpg" alt="" class="product-thumbnail active">
+                <img src="images/image-product-2-thumbnail.jpg" alt="" class="product-thumbnail ">
+                <img src="images/image-product-3-thumbnail.jpg" alt="" class="product-thumbnail ">
+                <img src="images/image-product-4-thumbnail.jpg" alt="" class="product-thumbnail ">
+            </div>
+            <div id="lightbox" class="lightbox">
+                <span class="close" onclick="closeLightbox()"><img src="images/icon-close.svg" alt=""></span>
+                <img id="lightbox-img" class="lightbox-img">
+                <button id="prev" class="prev" onclick="prevSlide()">
+                    <img src="images/icon-previous.svg" alt="">
+                </button>
+                <button id="next" class="next">
+                    <img src="images/icon-next.svg" alt="">
+                </button>
             </div>
         </div>
         <div class="product-details">
@@ -44,7 +55,7 @@
             <div class="add-cart-row">
                 <div class="items-count"> 
                     <img src="images/icon-plus.svg" class="increment-icon">
-                    <h1> 0 </h1>
+                    <h1 id="itemCount"> 0 </h1>
                     <img src="images/icon-minus.svg" class="decrement-icon">
                 </div>
                 <button class="add-cart-btn">
@@ -54,6 +65,6 @@
             </div>
         </div>
     </div>
-    
+    <script src="js/main.js"></script>
 </body>
 </html>

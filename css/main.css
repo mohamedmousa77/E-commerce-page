@@ -70,6 +70,7 @@ body {
 }
 /* .main-image img { */
 .cover-image {
+    cursor: pointer;
     height: auto;
     width: 100%;
     border-radius: 15px;
@@ -95,7 +96,55 @@ body {
 }
 .product-thumbnail:hover, .product-thumbnail.active {
     border: 2px solid orange;
-    opacity: 0 solid transparent.5;
+    opacity: 50%;
+}
+/* ! ## BODY [Lightbox Modal] ## */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Questo centra anche verticalmente */
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+}
+.lightbox-img {
+    width: 400px;
+    border-radius: 15px;
+}
+.lightbox .close {
+    position: absolute;
+    top: 9%;
+    right: 35%;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prev {
+    left: 32%;
+}
+
+.next {
+    right: 32%;
 }
 /* ! ## BODY [Product details] ## */
 .product-details {
@@ -114,24 +163,22 @@ body {
     font-weight: bold;
     margin-bottom: 15px;
 }
-
 .product-desc {
     font-size: 16px;
     color: #555;
     margin-bottom: 25px;
     line-height: 1.6;
 }
-
 .product-price {
     font-size: 24px;
     font-weight: 700;
     color: #222;
 }
+/* ! ## BODY [Adding to cart] ## */
 .add-cart-row {
     display: flex;
     gap: 15px;
     margin-top: 50px;
-
 }
 .add-cart-btn {
     background-color: hsl(26, 100%, 55%);
@@ -161,8 +208,6 @@ body {
     height: 50px;
     opacity: 1;
     padding: 0 solid transparent 15px;
-
-
 }
 .add-cart-icon {
     color: #222;
