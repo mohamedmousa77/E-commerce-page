@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/image-product-4.jpg">
     <link rel="stylesheet" href="css/main.css">
     <title>E-commerce product page</title>
 </head>
@@ -21,7 +21,15 @@
         </nav>
         <!-- TODO: Adding cart html -->
         <div class="header-icon">
-            <img src="images/icon-cart.svg" class="cart-icon">
+            <div class="cart-icon" id="cartIcon" onclick="toggleCart()">
+                <img src="images/icon-cart.svg">
+                <span id="cart-count">0</span>
+            </div>
+            <div class="cart-popup" id="cartPopup">
+                <p>Cart</p>
+                <div id="cart-content"></div>
+                <button onclick="checkOut()">Checkout</button>
+            </div>
             <img src="images/image-avatar.png" class="avatar">
         </div>
     </header>
@@ -58,7 +66,7 @@
                     <h1 id="itemCount"> 0 </h1>
                     <img src="images/icon-minus.svg" class="decrement-icon">
                 </div>
-                <button class="add-cart-btn">
+                <button class="add-cart-btn" id="addToCart">
                     <img src="images/icon-cart.svg" class="add-cart-icon">
                     <p class="add-cart-txt">Add to cart</p>
                 </button>
